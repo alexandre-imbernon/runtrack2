@@ -1,0 +1,106 @@
+/* Style global */
+body {
+  background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
+  background-size: 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 40px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Titre */
+h2 {
+  color: #ffea00;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+  font-size: 2.5em;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc; }
+  to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+}
+
+/* Formulaire */
+form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid #ff00cc;
+}
+
+/* Étiquettes et champs */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffea00;
+  text-shadow: 0 0 5px #ff00cc;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ff00cc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1em;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #00ffcc;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Bouton */
+input[type="submit"] {
+  background: linear-gradient(90deg, #ff00cc, #00ffcc);
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Résultat */
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffea00;
+  text-shadow: 0 0 10px #ff00cc;
+  animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

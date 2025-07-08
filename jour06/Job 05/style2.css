@@ -1,0 +1,106 @@
+/* Style global */
+body {
+  background: linear-gradient(135deg, #a3bffa, #fbc7d4);
+  background-size: 200%;
+  animation: softShift 12s ease infinite;
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3436;
+  margin: 0;
+  padding: 40px;
+}
+
+@keyframes softShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Titre */
+h2 {
+  color: #6c5ce7;
+  margin-bottom: 20px;
+  font-size: 2.3em;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(108, 92, 231, 0.5);
+  animation: subtleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  from { text-shadow: 0 0 8px rgba(108, 92, 231, 0.5); }
+  to { text-shadow: 0 0 12px rgba(251, 199, 212, 0.5); }
+}
+
+/* Formulaire */
+form {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  border: 2px solid #dfe6e9;
+}
+
+/* Étiquettes et champs */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2d3436;
+  text-shadow: 0 0 3px rgba(108, 92, 231, 0.3);
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #b2bec3;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2d3436;
+  font-size: 1em;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #6c5ce7;
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* Bouton */
+input[type="submit"] {
+  background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(108, 92, 231, 0.6);
+}
+
+/* Résultat */
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #2d3436;
+  text-shadow: 0 0 5px rgba(251, 199, 212, 0.4);
+  animation: gentlePulse 2s ease infinite;
+}
+
+@keyframes gentlePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
